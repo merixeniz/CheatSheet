@@ -1,0 +1,10 @@
+    docker container run -it --name proxy nginx bash
+    
+    
+    //podłączenie do działającego kontenera bez zatrzymywania (otwiera nowy proces basza w kontenerze)
+    docker container exec -it <name> bash
+
+    //specify --rm for automatic cleanup after executing command 
+    //od razu usuwa cały kontener!!!
+    docker container run --rm -it --name proxy nginx bash
+

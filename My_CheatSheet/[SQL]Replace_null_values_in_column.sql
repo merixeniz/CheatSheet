@@ -1,0 +1,1 @@
+select coalesce(colName, 'value instead of null') AS colName_alias FROM table_name;

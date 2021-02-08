@@ -1,0 +1,4 @@
+createuser --interaqctive 
+--bez logowania do db
+
+ALTER ROLE <name> WITH ENCYRPTED PASSWORD 'psw';

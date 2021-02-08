@@ -1,0 +1,4 @@
+docker swarm join-token manager //tokeny do dołączania do swarma
+docker node lsdocker node update --role manager <node_name>
+
+docker service create --name search --replicas 3 -p 9200:9200 elasticsearch:2

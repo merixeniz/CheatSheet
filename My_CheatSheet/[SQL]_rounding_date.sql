@@ -1,0 +1,1 @@
+SELECT DAY_TRUNC('year', date '1992/10/12');

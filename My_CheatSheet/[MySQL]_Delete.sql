@@ -1,0 +1,1 @@
+DELETE FROM tab_rbac_permissions WHERE roleID = (SELECT Id FROM tab_rbac_roles WHERE NAME='SzymonJ');

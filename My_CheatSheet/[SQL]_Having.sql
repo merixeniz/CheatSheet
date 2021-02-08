@@ -1,0 +1,3 @@
+--having to taki WHERE tylko używany przy group by. 
+--Jeśli chcemy go użyć dany set danych musi być 
+--grupowany przez group by.

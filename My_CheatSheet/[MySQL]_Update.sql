@@ -1,0 +1,1 @@
+Update tab_rbac_users SET roleID = (SELECT Id FROM tab_rbac_roles WHERE Name = '{roleName}') WHERE login = '{userName}'

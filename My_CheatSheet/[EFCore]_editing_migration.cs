@@ -1,0 +1,1 @@
+//we can edit migration using migrationBuilder.Sql(<yourSqlQuery>);

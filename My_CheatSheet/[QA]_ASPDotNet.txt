@@ -1,0 +1,26 @@
+-whats the difference between @model and @Model?
+//model is for importing data to view, Model is for using this data in View 
+
+-Where do we configure routing?
+//startup.cs and in function attributes in controllers
+
+-CORS
+//we set it up in Startup.cs
+
+-Generating textbox or other controls?
+//HtmlHelpers
+
+-What is ViewBag
+//
+
+-How to pass string to View the simpliest way
+//
+
+-How to pass data to subpages 
+//
+
+-what is Session object used for
+//
+
+-whats the difference between POST-GET-PUT, when do we use them
+//

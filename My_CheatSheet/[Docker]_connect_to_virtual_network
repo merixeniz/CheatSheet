@@ -1,0 +1,2 @@
+docker network connect <network_hash> <container_hash>
+docker network disconnect <network_hash> <container_hash>

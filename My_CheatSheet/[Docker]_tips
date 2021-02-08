@@ -1,0 +1,2 @@
+Containers shouldn;t rely on IP's becouse they are too dynamic and change too often.
+If we put 2 containers in one network they will find eachother by their names

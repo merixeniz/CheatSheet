@@ -1,0 +1,7 @@
+dotnet tool install --global dotnet-ef --version // version is optional 
+dotnet-ef
+dotnet ef migrations add InitialCreate -p /persistanceProj/ -s /StartupProj/  //creating migration snapshot
+
+dotnet run -p API/ //start debugging
+dotnet restore
+dotnet watch run (everytime we make change app rebuilds )

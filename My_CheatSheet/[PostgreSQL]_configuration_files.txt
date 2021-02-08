@@ -1,0 +1,15 @@
+POostgres config is in 2 files:
+
+pg_hba.conf -> all authentication and connecting rules of postgres,
+postgresql.conf -> postgres conf
+
+//to find those files execute command 
+show hba_file
+show config_file
+
+/retart db after changes
+
+
+//to change password encyrption visit postgres.conf, to enable password encryption 
+//visit pg_hba.conf
+//if we do that we have to alter all users and create new passwords with new encryption method

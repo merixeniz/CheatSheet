@@ -1,0 +1,35 @@
+//View (should be post!!!)
+<a class="nav-link btn btn-info" asp-controller="UsersManager" asp-action="UserPrivileges" asp-route-usrID="@user.user_id" asp-route-usrLogin="@user.login" >Edit</a>
+
+//Controller (zapobiega ponownemuy przesłaniu danych przy poście)
+public IActionResult Main()
+        {
+            ViewBag.Users = _userManager.LoadUsers().OrderBy(x => x.user_id);
+            return View("Main");
+        }
+
+
+public IActionResult UserPrivileges(string usrID, string usrLogin)
+        {
+            var privileges = _userManager.LoadUsersPrivileges(usrID, usrLogin);
+            privileges.userID = int.Parse(usrID);
+            privileges.userName = usrLogin;
+            //ViewBag.Privileges = privileges;
+            TempData["UserPrivileges"] = Newtonsoft.Json.JsonConvert.SerializeObject(privileges);
+            return RedirectToAction("LoadUserPrivileges");
+        }
+
+        public IActionResult LoadUserPrivileges(string usrID, string usrLogin)
+        {
+            //var privileges = _userManager.LoadUsersPrivileges(usrID, usrLogin);
+            //privileges.userID = int.Parse(usrID);
+            //privileges.userName = usrLogin;
+            if (TempData["UserPrivileges"] != null)
+            {
+                ViewBag.Privileges = Newtonsoft.Json.JsonConvert.DeserializeObject<UserPrivileges>((string)TempData["UserPrivileges"]);
+                return View("UserPrivileges");
+            }
+            else
+                return RedirectToAction("Main");
+
+        }

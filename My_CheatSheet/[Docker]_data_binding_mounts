@@ -1,0 +1,4 @@
+mapowanie folderu z hosta do floderu w kontenerze, te same dane tam bd.
+
+docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html
+

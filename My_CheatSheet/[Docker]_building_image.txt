@@ -1,0 +1,3 @@
+dokcer image build -t sutomname .
+
+// . stays for build in that directory;

@@ -1,0 +1,6 @@
+--view working stack: 
+docker stack services <name>
+docker stack deploy -c <composefile_with slight_modifications>.yml
+
+--instead of using docker stack update, use the same commanad as for deploy
+it will make the update authomatically, always keep one file as source of truth!

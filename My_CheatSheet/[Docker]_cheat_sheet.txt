@@ -1,0 +1,2 @@
++ overlay network is the only one we can use in swarm
++ -v is not compatibile with docker service, in service(swarm) we have to use --mount type=volume ,source=db/data, target=/var/lib/..

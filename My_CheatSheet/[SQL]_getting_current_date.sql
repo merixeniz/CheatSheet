@@ -1,0 +1,2 @@
+SELECT NOW()::date;
+SELECT CURRENT_DATE();

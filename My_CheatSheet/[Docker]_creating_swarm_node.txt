@@ -1,0 +1,12 @@
+to create swarm node locally use: 
+
+docker service create <name>
+
+to list nodes: 
+
+docker service ls
+docker service ps
+
+to scale node use:
+
+docker service update <id> --replicas 3

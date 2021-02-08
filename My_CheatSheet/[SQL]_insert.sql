@@ -1,0 +1,9 @@
+INSERT INTO student(
+    ..,
+    ..,
+    ..,
+) VALUES (
+    ...,
+    ...,
+    ,..,
+);

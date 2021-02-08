@@ -1,0 +1,1 @@
+INSERT INTO tab_rbac_permissions (roleID,claimType, claimValue) VALUES (7,'BoardAccess','LUJJb');

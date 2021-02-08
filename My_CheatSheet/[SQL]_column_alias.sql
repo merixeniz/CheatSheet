@@ -1,0 +1,1 @@
+SELECT emp_no as "number" from public.employees

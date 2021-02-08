@@ -1,0 +1,2 @@
+--Postgres LIKE only does text comparision so we must
+--cast whatever we use to Text
