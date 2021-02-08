@@ -1,0 +1,16 @@
+1. ssh git@10.0.50.100
+2. cd C:/Users/git/repos/
+3. mkdir repoName.git
+4. cd repoName.git
+5. git init --bare --shared
+6. icacls "C:/Users/git/repos/repoName.git" /grant git:(OI)(CI)F /T
+7. exit.
+
+//Lokalnie
+
+8. git init
+9. git remote add origin git@10.0.50.100:C/Users/git/repos/repoName.git
+10.
+git config --local remote.origin.uploadpack "powershell git-upload-pack"
+ git config --local remote.origin.receivepack "powershell git-receive-pack"
+ git fetch origin

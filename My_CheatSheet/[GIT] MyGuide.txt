@@ -1,0 +1,103 @@
+C:\Users\SzymonO\source\repos\TcpServerApp
+
+1. otworzyc basha gita w lokacji z projektami np. C:\Users\piotrs.PIOTRS-KOMP\Documents\Visual Studio 2012\Projects
+2. "git init" - inicjalizacja lokalnego repozytorium 
+3. utworzenie polaczenia z repo na githubie "git remote add origin https://github.com/merixeniz/ATSimgit on.git"
+   https://stackoverflow.com/questions/10904339/github-fatal-remote-origin-already-exists/22826225
+4. "git status" - pokazuje foldery ktore mam w repo lokalnym
+5. "git add VariableConversion" - wybranie folderu (projektu), ktory nalezy updatnac
+6. "git commit -m "Message" " - stworzenie commitu i napisanie jakies wiadomosci
+7. "git push -u origin master" - wrzucenie projektu na repozytorium zdalne (repo: origin, branch: master) 
+
+fatal: remote origin already exists. -> "git remote set-url origin https://github.com/merixeniz/ATSimon.git"
+
+
+git log - pokazuje commity
+git status - pokazuje pliki w fazie staged
+
+git reset --soft HEAD^ - usuwa ostatni commit (przenoszenie ostatniego commita do fazy staged)
+
+
+"stany" w jakich moga znadjowac sie pliki:
+
+	     git add		               git commit              git push                        - komendy do przejscia pomiedzy stanami zgodnie z strza³kami
+Untracked ------------> tracked + staged -----------------------> commit ----> remote repo
+	git reset head .                  git reset --hard HEAD^						       - komendy do przejscia przeciwnie do stanow (zamiast git checkout mozna git rm --cached Singleton/*)
+                                          git reset --soft HEAD^                                      
+
+--hard vs -- mixed vs --soft:
+https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
+
+. refers to current directory 
+
+usuwanie z stage (unstage):
+git rm --cached Singleton/*
+git reset -- <filePath> will unstage any staged changes for the given file(s).
+
+https://stackoverflow.com/questions/6919121/why-are-there-two-ways-to-unstage-a-file-in-git
+
+git diff - pokazuje roznice w pliku pomiedzy unstaged(not added), a stage (added)
+git diff staged - pokazuje ró¿nice (zmiany) w pliku pomiedzy staged a last commit
+
+origin - nazwa zdalnego repozytorium (zamiast pisac URL)
+git remote -v             - pokazuje wszystkie referencje do zdalnych repo (czyli nazwa -> URL do repo)
+git remote rm originn     - 
+
+git diff - porownuje Untracked z tracked + staged
+git diff staged - porownuje tracked + staged z commit
+
+git diff head head~1 - porownuje najswiezszy commit (head) z commitem head-1
+
+git pull origin master
+
+C:/Users/git/repos/test.git
+git re
+branchName: DynamicObjectCreator
+
+
+git-checkout - Switch branches or restore working tree files
+
+CREATING NEW BRANCH:
+git checkout -b <nazwaBrancha> //switch to branch, -b utworzenie nowej
+git branch <nazwaBrancha>
+
+git checkout <hash commita> <nazwa pliku> - przywraca projekt do wersji z danego commita, 
+
+pobieranie brancha istniejacego tylko w zdalnym repo
+git checkout --track origin/<nazwaBrancha> - tworzy lokalnie branch <nazwaBrancha> i trackuje w nim zdalny branch 
+
+ls
+git annotate nazwa_pliku - zwraca wszystkei zmiany wproadzone do danego pliku
+
+git merge --abort - zaprzestanie mergowania (w wypadku gdy wyskoczyl konflikt)
+
+https://stackoverflow.com/questions/2047465/how-can-i-delete-a-file-from-a-git-repository/2047477
+
+git rm --cached file1.txt
+git commit -m "remove file1.txt"
+
+git rm -r directory
+
+Tworzenie repo na serwerze:
+
+1. ssh git@10.0.50.100
+2. cd C:/Users/git/repos/
+3. mkdir repoName.git
+4. cd repoName.git
+5. git init --bare --shared
+6. icacls "C:/Users/git/repos/repoName.git" /grant git:(OI)(CI)F /T
+7. exit.
+
+//Lokalnie
+
+8. git init
+9. git remote add origin git@10.0.50.100:C/Users/git/repos/repoName.git
+10.
+git config --local remote.origin.uploadpack "powershell git-upload-pack"
+ git config --local remote.origin.receivepack "powershell git-receive-pack"
+ git fetch origin
+
+---------------------------------------------------------------------
+scaner_modbus_win.exe -c skan1.conf
+
+C:\Softy_Linuxowe_Pod_Windowsa\scaner_modbus_win\Release
