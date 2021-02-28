@@ -78,6 +78,13 @@ git commit -m "remove file1.txt"
 
 git rm -r directory
 
+Usuwanie brancha:
+lokalnego:
+git branch -D nazwaBrancha
+zdalnego:
+git push origin --delete nazwaBrancha
+
+
 Tworzenie repo na serwerze:
 
 1. ssh git@10.0.50.100
